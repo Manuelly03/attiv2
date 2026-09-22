@@ -34,7 +34,6 @@ function subtrair() {
 }
 
 
-
 function enviarFormulario() {
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
@@ -43,6 +42,11 @@ function enviarFormulario() {
 
     if (nome === "" || email === "") {
         mensagem.textContent = "Preencha todos os campos.";
+        return;
+    }
+
+    if (!email.includes("@")) {
+        mensagem.textContent = "Digite um e-mail válido.";
         return;
     }
 
