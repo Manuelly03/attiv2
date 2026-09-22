@@ -7,30 +7,36 @@ function aumentar() {
 
     document.getElementById("contador").textContent = numero;
 }
-
-function diminuir() {
-    numero--;
-
-    document.getElementById("contador").textContent = numero;
-}
-
-
 function somar() {
-    const numero1 = Number(document.getElementById("numero1").value);
-    const numero2 = Number(document.getElementById("numero2").value);
+    const campo1 = document.getElementById("numero1").value;
+    const campo2 = document.getElementById("numero2").value;
+    const resultado = document.getElementById("resultado");
 
-    const resultado = numero1 + numero2;
+    if (campo1 === "" || campo2 === "") {
+        resultado.textContent = "Preencha os dois números.";
+        return;
+    }
 
-    document.getElementById("resultado").textContent = resultado;
+    const numero1 = Number(campo1);
+    const numero2 = Number(campo2);
+
+    resultado.textContent = numero1 + numero2;
 }
 
 function subtrair() {
-    const numero1 = Number(document.getElementById("numero1").value);
-    const numero2 = Number(document.getElementById("numero2").value);
+    const campo1 = document.getElementById("numero1").value;
+    const campo2 = document.getElementById("numero2").value;
+    const resultado = document.getElementById("resultado");
 
-    const resultado = numero1 - numero2;
+    if (campo1 === "" || campo2 === "") {
+        resultado.textContent = "Preencha os dois números.";
+        return;
+    }
 
-    document.getElementById("resultado").textContent = resultado;
+    const numero1 = Number(campo1);
+    const numero2 = Number(campo2);
+
+    resultado.textContent = numero1 - numero2;
 }
 
 
