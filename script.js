@@ -43,7 +43,6 @@ function subtrair() {
 function enviarFormulario() {
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
-
     const mensagem = document.getElementById("mensagem");
 
     if (nome === "" || email === "") {
